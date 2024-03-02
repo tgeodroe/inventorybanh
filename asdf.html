@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(document).ready(function() {
+  $("#header").hover(function() {
+    $(this).find("p").css("height", "60px");
+  }, function() {
+    $(this).find("p").css("height", "0");
+  });
+});
+    </script>
+</head>
+<style>
+    header {
+  background-color: #446688;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: height 0.3s ease;
+}
+
+header p {
+  margin: 0;
+  height: 0;
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+</style>
+<body>
+    <header id="header">
+        <h1>Hover over me!</h1>
+        <p class="hidden">This is some hidden text that will be revealed when you hover over the header.</p>
+      </header>
+</body>
+</html>
